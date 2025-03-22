@@ -1,0 +1,29 @@
+@import "./fonts.css";
+:root {
+  /* 🌟 Brand Colors (Core Identity) */
+  --brand-primary: #3dbeff; /* Main brand color, used for key highlights */
+  --brand-secondary: #fdf3d6; /* Secondary brand color, soft background accents */
+  --brand-tertiary: #fad2cf; /* Supporting brand color, subtle highlights */
+  --brand-accent: #a3d6c3; /* Additional brand accent for balance */
+
+  /* 🎯 UI & Text Colors */
+  --text-primary: #23303e; /* Main text color (headings, body text) */
+  --text-secondary: #8c8c8c; /* Muted text (subtext, descriptions) */
+
+  /* 🟡 Call-to-Action & Alert Colors */
+  --cta-primary: #f8a21d; /* Main action buttons (e.g., "Contact Us") */
+  --cta-danger: #eb4a5f; /* Error, warnings, and destructive actions */
+
+  /* 🎨 Background & Neutral Colors */
+  --bg-primary: #ffffff; /* Main background */
+  --bg-secondary: #fdf3d6; /* Light muted background */
+}
+
+body {
+  margin: 0;
+  font-family: "Barlow";
+  font-weight: 400;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
