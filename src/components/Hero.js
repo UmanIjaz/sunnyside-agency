@@ -7,7 +7,7 @@ function Hero({ nextSectionScrollRef }) {
     }
   };
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
       <span>
         <h1>WE ARE CREATIVES</h1>
         <img
