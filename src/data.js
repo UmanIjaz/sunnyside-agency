@@ -1,3 +1,4 @@
+// Testimonial Data
 const testimonialData = [
   {
     image: "/assets/images/image-emily.jpg",
@@ -19,8 +20,7 @@ const testimonialData = [
   },
 ];
 
-export { testimonialData };
-
+// Gallery Images
 const galleryImages = [
   {
     mobileSrc: "/assets/images/mobile/image-gallery-milkbottles.jpg",
@@ -40,7 +40,9 @@ const galleryImages = [
   {
     mobileSrc: "/assets/images/mobile/image-gallery-sugarcubes.jpg",
     desktopSrc: "/assets/images/desktop/image-gallery-sugarcubes.jpg",
-    alt: "Sugarubes",
+    alt: "Sugar cubes", // Fixed typo
   },
 ];
-export { galleryImages };
+
+// Exporting the Data
+export { testimonialData, galleryImages };
