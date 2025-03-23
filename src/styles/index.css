@@ -47,6 +47,8 @@ body {
   font-family: "Barlow";
   font-weight: 400;
 
+  scroll-behavior: smooth;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

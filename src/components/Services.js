@@ -1,6 +1,9 @@
-function Services({ title, para, link, imgMobile, imgDesktop, align }) {
+function Services({ title, para, link, imgMobile, imgDesktop, align, ref }) {
   return (
-    <section className={`services ${align === "right" ? "reverse" : ""}`}>
+    <section
+      ref={ref}
+      className={`services ${align === "right" ? "reverse" : ""}`}
+    >
       <article className="services-content service-item">
         <h2>{title}</h2>
         <p>{para}</p>

@@ -1,9 +1,12 @@
 import { Hero, Services, Features, Testimonials, Gallery } from "./index";
+import { useRef } from "react";
 function Main() {
+  const nextSectionScrollRef = useRef(null);
   return (
     <main>
-      <Hero />
+      <Hero nextSectionScrollRef={nextSectionScrollRef} />
       <Services
+        ref={nextSectionScrollRef}
         title="Transform your brand"
         align="left"
         link="#"
