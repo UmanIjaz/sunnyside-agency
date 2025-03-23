@@ -1,22 +1,44 @@
 @import "./fonts.css";
 :root {
+  font-size: 16px;
   /* 🌟 Brand Colors (Core Identity) */
   --brand-primary: #3dbeff; /* Main brand color, used for key highlights */
   --brand-secondary: #fdf3d6; /* Secondary brand color, soft background accents */
   --brand-tertiary: #fad2cf; /* Supporting brand color, subtle highlights */
   --brand-accent: #a3d6c3; /* Additional brand accent for balance */
+  --brand-light: #6ed0ff;
 
   /* 🎯 UI & Text Colors */
   --text-primary: #23303e; /* Main text color (headings, body text) */
   --text-secondary: #8c8c8c; /* Muted text (subtext, descriptions) */
 
   /* 🟡 Call-to-Action & Alert Colors */
-  --cta-primary: #f8a21d; /* Main action buttons (e.g., "Contact Us") */
+  --cta-primary: #fad400; /* Main action buttons (e.g., "Contact Us") */
   --cta-danger: #eb4a5f; /* Error, warnings, and destructive actions */
 
   /* 🎨 Background & Neutral Colors */
   --bg-primary: #ffffff; /* Main background */
   --bg-secondary: #fdf3d6; /* Light muted background */
+
+  /* ----- Fonts ----- */
+  --fs-xs: 0.75rem; /* 12px */
+  --fs-sm: 0.875rem; /* 14px */
+  --fs-base: 1rem; /* 16px (Default) */
+  --fs-lg: 1.125rem; /* 18px */
+  --fs-xl: 1.25rem; /* 20px */
+  --fs-2xl: 1.5rem; /* 24px */
+  --fs-3xl: 2rem; /* 32px */
+  --fs-4xl: 2.5rem; /* 40px */
+
+  /* ---- Spacing ---- */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 40px;
+  --space-3xl: 64px;
 }
 
 body {
@@ -26,4 +48,210 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* h1 {
+  font-size: var(--fs-4xl);
+}
+h2 {
+  font-size: var(--fs-3xl);
+}
+p {
+  font-size: var(--fs-base);
+} */
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem); /* Scales between 32px and 48px */
+}
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+section {
+  padding: var(--space-3xl) var(--space-xl);
+}
+button {
+  padding: var(--space-sm) var(--space-md);
+}
+
+/* ---- HEADER Section ---- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  padding: 1.5rem 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99909;
+}
+
+.logo {
+  height: 26px;
+}
+
+/* Navbar Layout */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+/* Navigation Menu (Desktop) */
+.nav-menu {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-menu li {
+  color: white;
+  font-size: 18px;
+}
+.nav-menu li:hover {
+  color: #f7f7f7;
+  cursor: pointer;
+}
+
+/* Contact Button */
+.contact-btn {
+  font-family: Fraunces;
+  font-weight: 700;
+  border: none;
+  border-radius: 32px;
+  padding: 10px 1.5rem;
+  color: var(--text-primary);
+  background-color: #fff;
+  cursor: pointer;
+}
+.contact-btn:hover {
+  background-color: var(--brand-light);
+  color: #fff;
+}
+
+/* Hamburger Button (Hidden on Desktop) */
+.hamburger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Add Triangle Pointer */
+.mobile-menu::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+}
+
+.mobile-menu .contact-btn {
+  background-color: var(--cta-primary);
+  color: var(--text-primary);
+}
+
+/* Mobile Menu Items */
+.mobile-menu li {
+  color: var(--text-secondary);
+  font-size: 18px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  /* Hide desktop menu */
+  .nav-menu {
+    display: none;
+  }
+
+  /* Show hamburger menu */
+  .hamburger {
+    display: block;
+  }
+
+  /* Show mobile menu when active */
+  .mobile-menu {
+    display: flex;
+  }
+}
+
+/* ------ Hero Section ------ */
+.hero {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: Fraunces;
+  color: #fff;
+  background: url("/public/assets/images/desktop/image-header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  z-index: -1;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.hero span {
+  text-align: center;
+  padding-bottom: 118px;
+}
+.hero h1 {
+  font-size: 2.4rem;
+  letter-spacing: 7px;
+  padding: 1.5rem 0rem;
+}
+.hero img {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.hero img:hover {
+  transform: translateY(5px);
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    background: url("/public/assets/images/mobile/image-header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .hero span {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
 }
