@@ -60,17 +60,19 @@ p {
   font-size: var(--fs-base);
 } */
 h1 {
-  font-size: clamp(2rem, 5vw, 3rem); /* Scales between 32px and 48px */
+  font-size: clamp(2rem, 5vw, 2.5rem); /* Scales between 32px and 48px */
 }
 h2 {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-family: "Fraunces";
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0px;
+  line-height: 3rem;
 }
 p {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-}
-
-section {
-  padding: var(--space-3xl) var(--space-xl);
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: var(--text-secondary);
+  line-height: 1.7rem;
+  font-weight: 500;
 }
 button {
   padding: var(--space-sm) var(--space-md);
@@ -226,7 +228,6 @@ header {
   padding-bottom: 118px;
 }
 .hero h1 {
-  font-size: 2.4rem;
   letter-spacing: 7px;
   padding: 1.5rem 0rem;
 }
@@ -253,5 +254,88 @@ header {
 @media screen and (min-width: 1550px) {
   .hero h1 {
     font-size: 3.5rem;
+  }
+}
+
+/* ----- Services Section ------ */
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: dense;
+  max-width: 100%;
+}
+.reverse .service-item:nth-child(1) {
+  order: 2;
+}
+
+.reverse .service-item:nth-child(2) {
+  order: 1;
+}
+.services-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 1.5rem;
+  padding: 0rem 6rem;
+  width: 50%;
+}
+.services-content a {
+  font-family: "Fraunces";
+  font-weight: 800;
+  position: relative;
+  cursor: pointer;
+  display: inline;
+  width: fit-content;
+}
+.services-content a::after {
+  content: "";
+  z-index: -1;
+  width: 112%;
+  height: 0.5rem;
+  position: absolute;
+  left: -6px;
+  top: 68%;
+  border-radius: 1rem;
+  transition: 0.15s;
+  background-color: #fdf0aa;
+}
+.services-content a:hover::after {
+  background-color: var(--cta-primary);
+}
+.services-pic img {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (max-width: 1130px) {
+  h2 {
+    line-height: 2.5rem;
+  }
+  p {
+    line-height: 1.4rem;
+  }
+  .services-content {
+    gap: 0rem;
+    padding: 0rem 0rem;
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .services-content {
+    align-items: center;
+    text-align: center;
+    padding: 4rem 0rem;
+  }
+  .service-item:nth-child(1) {
+    order: 2;
+  }
+
+  .service-item:nth-child(2) {
+    order: 1;
   }
 }
