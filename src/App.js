@@ -74,6 +74,8 @@ function Main() {
       />
 
       <Features />
+
+      <Gallery />
     </main>
   );
 }
@@ -147,6 +149,32 @@ function Features() {
           </p>
         </div>
       </div>
+    </section>
+  );
+}
+
+function Gallery() {
+  return (
+    <section className="gallery">
+      <picture>
+        <source srcSet="/assets/images/mobile/image-gallery-milkbottles.jpg" />
+        <img src="/assets/images/desktop/image-gallery-milkbottles.jpg" />
+      </picture>
+
+      <picture>
+        <source srcSet="/assets/images/mobile/image-gallery-orange.jpg" />
+        <img src="/assets/images/desktop/image-gallery-orange.jpg" />
+      </picture>
+
+      <picture>
+        <source srcSet="/assets/images/mobile/image-gallery-cone.jpg" />
+        <img src="/assets/images/desktop/image-gallery-cone.jpg" />
+      </picture>
+
+      <picture>
+        <source srcSet="/assets/images/mobile/image-gallery-orange.jpg" />
+        <img src="/assets/images/desktop/image-gallery-orange.jpg" />
+      </picture>
     </section>
   );
 }

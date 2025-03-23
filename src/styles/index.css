@@ -123,7 +123,7 @@ header {
   font-size: 18px;
 }
 .nav-menu li:hover {
-  color: #f7f7f7;
+  color: var(--text-primary);
   cursor: pointer;
 }
 
@@ -401,5 +401,24 @@ header {
 @media screen and (max-width: 480px) {
   .feature-content {
     width: 95%;
+  }
+}
+
+/* ----- Gallery section ------ */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 100%;
+  gap: 0px;
+}
+.gallery img {
+  width: 100%;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 }
