@@ -517,3 +517,6 @@ header {
 .social-links img:hover {
   cursor: pointer;
 }
+.nav-menu_footer {
+  display: flex !important;
+}

@@ -28,7 +28,7 @@ function Logo() {
   );
 }
 
-function NavBar({ showBtn = true }) {
+function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -38,11 +38,9 @@ function NavBar({ showBtn = true }) {
         <li>About</li>
         <li>Services</li>
         <li>Project</li>
-        {showBtn && (
-          <li>
-            <button className="contact-btn">CONTACT</button>
-          </li>
-        )}
+        <li>
+          <button className="contact-btn">CONTACT</button>
+        </li>
       </ul>
 
       {/* Hamburger Menu (Visible Only on Mobile) */}
@@ -212,7 +210,11 @@ function Footer() {
           fill-rule="nonzero"
         />
       </svg>
-      <NavBar showBtn={false} />
+      <ul className="nav-menu nav-menu_footer">
+        <li>About</li>
+        <li>Services</li>
+        <li>Project</li>
+      </ul>
       <SocialLinks />
     </footer>
   );
