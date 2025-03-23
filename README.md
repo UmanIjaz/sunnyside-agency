@@ -38,8 +38,8 @@ Users should be able to:
 
 ## Links
 
-- [Live Demo](https://your-live-site-url.com)
-- [Solution on Frontend Mentor](https://your-solution-url.com)
+- [Live Demo](https://sunysidex.netlify.app/)
+- [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-landing-page-using-css-grid-and-flexbox-and-react-N2PXEc6joZ)
 - [Source Code on Github](https://github.com/UmanIjaz/sunnyside-agency)
 
 ## My Process
