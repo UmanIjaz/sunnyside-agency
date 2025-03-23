@@ -53,15 +53,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* h1 {
-  font-size: var(--fs-4xl);
-}
-h2 {
-  font-size: var(--fs-3xl);
-}
-p {
-  font-size: var(--fs-base);
-} */
 h1 {
   font-size: clamp(2rem, 5vw, 2.5rem);
 }
@@ -297,6 +288,8 @@ header {
   cursor: pointer;
   display: inline;
   width: fit-content;
+  color: var(--text-primary);
+  text-decoration: none;
 }
 .services-content a::after {
   content: "";
